@@ -51,7 +51,7 @@ else{
 
 
 public String toString(){
-  return "This card has " + balance + " dollars loaded" ;
+  return "This card has " + balance + " dollars" ;
 }
 
 
