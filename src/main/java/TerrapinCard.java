@@ -34,18 +34,18 @@ public void payGourmet() {
 }
 
 public void loadMoney(double amount) {
-double newBalance= balance +amount;
-double maxBalance = 150;
+  double newBalance= balance +amount;
+  double maxBalance = 150;
 
-if (amount<0){
-return;
-}
-if (newBalance > maxBalance){
-  balance = maxBalance;
-}
-else{
-  balance = newBalance;
-}
+  if (amount<0){
+  return;
+  }
+  if (newBalance > maxBalance){
+    balance = maxBalance;
+  }
+  else{
+    balance = newBalance;
+  }
 }
 
 
