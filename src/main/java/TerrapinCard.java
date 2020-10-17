@@ -7,14 +7,17 @@ public class TerrapinCard {
   }
 
 
+  public double getBalance(){
+    return balance;
+  }
 
 
 
 
   public void payEconomical() {
-    
-    if(this.balance >= 2.5){
-      this.balance = balance - 2.5;
+    double price = 2.5;
+    if(balance - price > 0){
+      balance -= price;
       
      }
   }
@@ -24,33 +27,31 @@ public class TerrapinCard {
 
 
 public void payGourmet() {
-  
-  if(this.balance >= 4.0){
-    this.balance = balance - 4.0;
+  double price = 4.0;  
+  if(balance - price > 0){
+      balance -= price;
   }
 }
 
 public void loadMoney(double amount) {
+  double newBalance= balance +amount;
   double maxBalance = 150;
 
   if (amount<0){
   return;
   }
-  else if ((this.balance + amount)>150){
-    this.balance = maxBalance;
+  if (newBalance > maxBalance){
+    balance = maxBalance;
   }
   else{
-    this.balance += amount;
+    balance = newBalance;
   }
 }
 
-public double getBalance(){
-  return balance;
-}
 
 
 public String toString(){
-  return "This card has " + balance + " dollars" ;
+  return "The card has " + balance + " dollars" ;
 }
 
 
